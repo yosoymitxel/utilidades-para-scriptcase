@@ -43,7 +43,8 @@
                 let textoArray  = (str).split(/[\n]+/g)
                 let textoResult = []
                 let masLargo    = 0
-                let expresionRe = `/[$\\[\\]\\{\\}'"\\w\\s\\(\\)]+${delimitador}/`
+                let expresionRe = dev_str_reg_crear_expresion(`/[$\\[\\]\\{\\}'"\\w\\s\\(\\)]+${delimitador}/`)
+
                 if(depurar)    {
                     var_dump(textoArray)
                     var_dump(delimitador)
@@ -59,8 +60,8 @@
                 }
 
                 for(let value of textoArray){
-                    let valuePost  = dev_is_string(value) ? t_trim(dev_str_reemplazar_expresion_regular(value, expresionRe,'')) : ''
-                    let valuePre   = dev_is_string(value) ? t_trim(dev_str_substring(dev_str_conseguir_expresion_regular(value,expresionRe),0,-1*(delimitador.length))) : ''
+                    let valuePost  = dev_is_string(value) ? t_trim(dev_str_reemplazar(value, expresionRe,'')) : 'null'
+                    let valuePre   = dev_is_string(value) ? t_trim(dev_str_substring(dev_str_reg_conseguir(value,expresionRe),0,-1*(delimitador.length))) : 'null'
                     if (dev_is_string(value,2)){
                         textoResult.push(valuePre.padEnd(masLargo, ' ')+` ${delimitador} `+valuePost)
                     }
