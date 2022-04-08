@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Log de Errores | Aplicaciones en SC</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script id="dev-js-devbrary" src="https://cdn.jsdelivr.net/gh/yosoymitxel/devbrary-js-test-library@master/devbrary.js"></script>
+    </head>
+    <body>
+        <div class="row justify-content-center mt-4">
+            <div class="col-9">
+                <form>
+                    <div class="form-row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" id="proyecto" placeholder="Proyecto" value="factumm">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="aplicacion" placeholder="Aplicación" value="grd_">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" id="servidor-prod" placeholder="Servidor producción" value="">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="proyecto-prod" placeholder="Proyecto producción" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="log">Log</label>
+                        <textarea class="form-control" id="log" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="dev_dom_generar_log()">Generar</button>
+                    <div class="form-row mt-3">
+                        <div class="col">
+                            <input type="text" onclick="this.select();" class="form-control" id="url-sc" placeholder="URL scriptcase" value="">
+                        </div>
+                        <div class="col">
+                            <input type="text" onclick="this.select();" class="form-control" id="url-test" placeholder="URL test" value="">
+                        </div>
+                        <div class="col">
+                            <input type="text" onclick="this.select();" class="form-control" id="url-prod" placeholder="URL producción" value="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script id="dev-js-generador">
+            function dev_dom_get_value(id){
+                return $('#'+id).val()
+            }
+
+            function dev_dom_generar_log(){
+                let proyectoProd  = dev_is_string(dev_dom_get_value('proyecto-prod'),1) ? dev_dom_get_value('proyecto-prod') : dev_dom_get_value('proyecto')
+                let urlscriptcase = `http://192.168.18.45/scriptcase/app/${dev_dom_get_value('proyecto')}/${dev_dom_get_value('aplicacion')}/php_errors.log`
+                let urlTest       = `http://192.168.18.45/test/${dev_dom_get_value('proyecto')}/${dev_dom_get_value('aplicacion')}/php_errors.log`
+                let urlProd       = `http://${dev_dom_get_value('servidor-prod')}/${proyectoProd}/${dev_dom_get_value('aplicacion')}/php_errors.log`
+
+                $.get( urlscriptcase, function( data ) {
+                    $( "#log" ).append( data );
+                });
+
+                $.get( urlTest, function( data ) {
+                    $( "#log" ).append( data );
+                });
+
+                $('#url-sc')  .val(urlscriptcase)
+                $('#url-test').val(urlTest)
+
+                if(dev_is_string(dev_dom_get_value('servidor-prod',1))){
+                    $('#url-prod').val(urlProd)
+
+                    $.get( urlProd, function( data ) {
+                        $( "#log" ).append( data );
+                    });
+
+                }
+            }
+        </script>
+    </body>
+</html>

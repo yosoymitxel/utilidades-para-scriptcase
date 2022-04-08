@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ordenar variables | Aplicaciones en SC</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script id="dev-js-devbrary" src="https://cdn.jsdelivr.net/gh/yosoymitxel/devbrary-js-test-library@master/devbrary.js"></script>
+        <style id="dev-css-main">
+            textarea{
+                min-height: 350px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row justify-content-center mt-4">
+            <div class="col-9">
+                <form>
+                    <div class="form-row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" id="delimitador" placeholder="Delimitador" value="=">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="result">Código de variables</label>
+                        <textarea class="form-control" id="result" rows="3">
+                            $fecha = '';
+                            $cliente = '';
+                            $urgencia = '';
+                            $emision = '';
+                            $solicitante = '';
+                        </textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="dev_dom_copiar_en_portapapeles_attr_elemento('result','val')">Copiar</button>
+                </form>
+            </div>
+        </div>
+        <script id="dev-js-generador">
+            function espaciado(str,delimitador='', depurar=false){
+                let textoArray  = (str).split(/[\n]+/g)
+                let textoResult = []
+                let masLargo    = 0
+                let expresionRe = dev_str_reg_crear_expresion(`/[$\\[\\]\\{\\}'"\\w\\s\\(\\)]+${delimitador}/`)
+
+                if(depurar)    {
+                    var_dump(textoArray)
+                    var_dump(delimitador)
+                    var_dump(`/[$\\[\\]\\w\\s\\(\\)]+${delimitador}/`)
+                }
+
+                for(let value of textoArray){
+                    value = dev_is_string(value) ? t_trim(dev_str_reemplazar_expresion_regular(t_trim(value),`/(${delimitador})[\\w\\W]+;$/`,'')) : ''
+                    if (dev_is_string(value) && masLargo < value.length){
+                        masLargo = value.length+1
+                    }
+
+                }
+
+                for(let value of textoArray){
+                    let valuePost  = dev_is_string(value) ? t_trim(dev_str_reemplazar(value, expresionRe,'')) : ''
+                    let valuePre   = dev_is_string(value) ? t_trim(dev_str_substring(dev_str_reg_conseguir(value,expresionRe),0,-1*(delimitador.length))) : ''
+                    if (dev_is_string(value,2)){
+                        textoResult.push(valuePre.padEnd(masLargo, ' ')+` ${delimitador} `+valuePost)
+                    }
+
+                }
+                let result = textoResult.join('\n')
+
+                return result
+            }
+
+            $('#result, #delimitador').on('input',function () {
+                let result = espaciado(($('#result').val()).trim(),$('#delimitador').val())
+
+                $('#result').val((result))
+            })
+        </script>
+    </body>
+</html>
