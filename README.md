@@ -40,8 +40,14 @@ if($rs){
 }
 ```
 
+## Listar campos
+Dentro del entorno de desarrollo al abrir un proyecto y luego una aplicación con este se listará el nombre de cada uno de los campos que usa la app
 
-
+* archivo
+* nombre
+* tabla
+* delimitador
+ 
 
 
 
