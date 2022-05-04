@@ -8,7 +8,7 @@ Los html tienen funciones específicas.
 
 # Aplicaciones
 
-## Conseguir Titulos Nombre App De Menu
+## Conseguir títulos nombre apps del menú
 Sirve al abrir un "app_menu" este te sirve para de una sola vez traer una lista con todos los nombres de las aplicaciones y los enlaces de estas "Reporte persona - grid_persona".
 Al finalizar retorna 2 arrays y copia en el portapapeles estos.
 
