@@ -8,11 +8,12 @@ Los html tienen funciones específicas.
 
 # Aplicaciones
 
-## ConseguirTitulosNombreAppDeMenuSC
+## Conseguir Titulos Nombre App De Menu
 Sirve al abrir un "app_menu" este te sirve para de una sola vez traer una lista con todos los nombres de las aplicaciones y los enlaces de estas "Reporte persona - grid_persona".
+Al finalizar retorna 2 arrays y copia en el portapapeles estos.
 
 ## Contador de aplicaciones agrupadas por tipo
-En el inicio del entorno de desarrollo al darle a "todas las aplicaciones" dentro de un proyecto este te retorna un lista contador del tipo de aplicaciones que hay en este.
+En el inicio del *entorno de desarrollo* al darle a *"todas las aplicaciones"* dentro de un proyecto este te retorna un lista contador del tipo de aplicaciones que hay en este.
 
 ### Ejemplo
 Proyecto: FactuSD 
