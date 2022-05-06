@@ -52,7 +52,7 @@ Dentro del entorno de desarrollo al abrir un proyecto y luego una aplicación co
 ## Procesar nombre archivo
 Este sirve para cuando tenemos una imagen temporal y queremos acceder a esta.
 
-Scriptcase de forma interna gestiona con expresiones como "__SC_SPACE__" que tiene un equivalente en texto normal en este caso por ejemplo " "
+Scriptcase de forma interna gestiona con expresiones como "\_\_SC_SPACE\_\_" que tiene un equivalente en texto normal en este caso por ejemplo " "
 
 
 
