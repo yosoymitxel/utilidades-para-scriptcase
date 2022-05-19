@@ -54,5 +54,25 @@ Este sirve para cuando tenemos una imagen temporal y queremos acceder a esta.
 
 Scriptcase de forma interna gestiona con expresiones como "\_\_SC_SPACE\_\_" que tiene un equivalente en texto normal en este caso por ejemplo " "
 
+# Extra: Tutoriales de solución de errores de ScriptCase
+
+En mi medium suelo subir soluciones a errores de ScriptCase con los que me voy encontrando
+
+https://medium.com/@yosoymitxel
+
+## Lista
+
+https://medium.com/@yosoymitxel/list/tutoriales-en-espanol-de-scriptcase-139a51d40311
+
+## Errores:
+
+* Agregar PHPExcel o Bootstrap en ScriptCase — Liberías externas
+* Obtener query ejecutado de Scriptcase mediante el código fuente
+* Error “Invalid argument supplied for foreach()” en Scriptcase — PDF y posible solución
+* Quitar | Deshabilitar botón de Actualizar, Nuevo y Borrar en Scriptcase
+* Error formulario de ScriptCase sale pantalla en blanco
+* Cambiar tema en aplicación ScriptCase
+* Evitar que un formulario haga un Insert, Update o Delete de forma nativa en ScriptCase
+
 
 
