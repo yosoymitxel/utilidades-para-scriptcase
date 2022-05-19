@@ -66,13 +66,19 @@ https://medium.com/@yosoymitxel/list/tutoriales-en-espanol-de-scriptcase-139a51d
 
 ## Errores:
 
-* Agregar PHPExcel o Bootstrap en ScriptCase — Liberías externas
-* Obtener query ejecutado de Scriptcase mediante el código fuente
-* Error “Invalid argument supplied for foreach()” en Scriptcase — PDF y posible solución
-* Quitar | Deshabilitar botón de Actualizar, Nuevo y Borrar en Scriptcase
-* Error formulario de ScriptCase sale pantalla en blanco
-* Cambiar tema en aplicación ScriptCase
-* Evitar que un formulario haga un Insert, Update o Delete de forma nativa en ScriptCase
+* Agregar PHPExcel o Bootstrap en ScriptCase — Liberías externas [Leer post](https://medium.com/@yosoymitxel/agregar-phpexcel-o-bootstrap-en-scriptcase-liberías-externas-tutorial-en-español-28d5c2951c52)
+* Obtener query ejecutado de Scriptcase mediante el código fuente [Leer post](https://medium.com/@yosoymitxel/obtener-query-ejecutado-de-scriptcase-mediante-el-código-fuente-af00920619f4)
+* Error “Invalid argument supplied for foreach()” en Scriptcase — PDF y posible solución [Leer post](https://medium.com/@yosoymitxel/error-invalid-argument-supplied-for-foreach-en-scriptcase-pdf-y-posible-solución-ea8e68a8fb68)
+* Quitar | Deshabilitar botón de Actualizar, Nuevo y Borrar en Scriptcase [Leer post](https://medium.com/@yosoymitxel/quitar-deshabilitar-botón-de-actualizar-nuevo-y-borrar-en-scriptcase-tutorial-en-español-1fd6ec053ec8)
+* Error formulario de ScriptCase sale pantalla en blanco [Leer post](https://medium.com/@yosoymitxel/error-formulario-de-scriptcase-sale-pantalla-en-blanco-4567b408cf70)
+* Cambiar tema en aplicación ScriptCase [Leer post](https://medium.com/@yosoymitxel/cambiar-tema-en-aplicación-scriptcase-7e4a1fce92f)
+* Evitar que un formulario haga un Insert, Update o Delete de forma nativa en ScriptCase [Leer post](https://medium.com/@yosoymitxel/evitar-que-un-formulario-haga-un-insert-update-o-delete-de-forma-nativa-en-scriptcase-tutorial-159ef2c2de04)
+
+
+
+
+
+
 
 
 
