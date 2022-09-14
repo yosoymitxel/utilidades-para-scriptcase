@@ -2,6 +2,7 @@ function generarLista(arr){
     let text = '$campos = [\n'
     
     for(let a of arr){
+        a = (a).trim()
         text += `    '${a}',\n`
     }
 
