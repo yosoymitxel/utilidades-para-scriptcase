@@ -5,7 +5,7 @@ function generarLista(arr){
         text += `    '${a}',\n`
     }
 
-    text += ']\n'
+    text += '];\n'
 
     
     text += `
