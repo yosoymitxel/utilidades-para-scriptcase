@@ -7,6 +7,11 @@ function campoaEtiquetaCamelCase(){
     .replace(/^./, function(str){ return str.toUpperCase(); })
 
     $(o).val( ((value).trim().replace(/[\s\t]+/g,' ')).trim() )
+    
+    //Puedes añadir cambios para por ejemplo quitar texto de la nomenclatura
+    // D T campo .replace(/^D T /g,' ')).trim()
+    
+    $(o).change()
   })
   
 }
