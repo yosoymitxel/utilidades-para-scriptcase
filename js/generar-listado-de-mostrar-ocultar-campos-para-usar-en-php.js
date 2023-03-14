@@ -80,3 +80,12 @@ generarLista([
 ])
 
 // El resultado se copia en una función en php 
+
+/*
+Se debe poner un campo llamado campo mostrar
+$camposMostrar = [
+	// Nombre del campo, mostrar, activar
+	//['IdEntidadTipo' , true   , true],
+];
+
+*/
