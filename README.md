@@ -74,7 +74,6 @@ https://medium.com/@yosoymitxel/list/tutoriales-en-espanol-de-scriptcase-139a51d
 * Cambiar tema en aplicación ScriptCase [Leer post](https://medium.com/@yosoymitxel/cambiar-tema-en-aplicación-scriptcase-7e4a1fce92f)
 * Evitar que un formulario haga un Insert, Update o Delete de forma nativa en ScriptCase [Leer post](https://medium.com/@yosoymitxel/evitar-que-un-formulario-haga-un-insert-update-o-delete-de-forma-nativa-en-scriptcase-tutorial-159ef2c2de04)
 * Error en “Clasificación” en aplicaciones del tipo Formulario con Grid View y Grid editable no ordena en Scriptcase [Leer post](https://yosoymitxel.medium.com/error-en-clasificaci%C3%B3n-en-aplicaciones-del-tipo-formulario-con-grid-view-y-grid-editable-no-df108268a1ea)
-* Quitar | Deshabilitar botón de Actualizar en un Formulario del tipo Grid editable en Scriptcase [Leer post](https://medium.com/@yosoymitxel/quitar-deshabilitar-bot%C3%B3n-de-actualizar-en-un-formulario-del-tipo-grid-editable-en-scriptcase-3e5551f96b1c)
 * Cómo totalizar campos del tipo date y time en un GRID de Scriptcase con Agrupación dinámica [Leer post](https://medium.com/@yosoymitxel/c%C3%B3mo-totalizar-campos-del-tipo-date-y-time-en-un-grid-de-scriptcase-con-agrupaci%C3%B3n-din%C3%A1mica-188938391353)
 
 
