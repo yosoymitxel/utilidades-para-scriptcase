@@ -1,5 +1,5 @@
 function getTituloNombreApp(enumerar=true,delimitador='\n',copiarPortapapeles=true){
-        let re        = /=(grd|form|frm|control|ctr|ctrl|grid|menu|proc|app|Ctr|dashboard)_(\w)+/
+        let re        = /=(gri?d|fo?rm|c(on)?tr(o)?l?|menu|proc|app|dashboard)_\w+/i
         let obviar    = /(#)/
         var tituloApp = []
         var enlaceApp = []
