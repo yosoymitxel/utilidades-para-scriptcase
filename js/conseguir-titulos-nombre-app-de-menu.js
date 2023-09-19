@@ -46,7 +46,8 @@ function getTituloNombreApp(enumerar=true,delimitador='\n',copiarPortapapeles=tr
                 document.execCommand("copy");
                 $temp.remove();
             }
-            
+            const result = enlaceApp.map((item, index) => [item, tituloApp[index]]);
+            console.log(result);
             return [tituloApp,enlaceApp];
         }
 
